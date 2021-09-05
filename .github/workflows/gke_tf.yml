@@ -65,7 +65,7 @@ jobs:
       
       - id: get-pods
         if: github.ref == 'refs/heads/master' && github.event_name == 'push' 
-        run: kubectl get pods -A 
+        run: kubectl get pod -A 
 
       - id: install-flagger 
         if: github.ref == 'refs/heads/master' && github.event_name == 'push' 
